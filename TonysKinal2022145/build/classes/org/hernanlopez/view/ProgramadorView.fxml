@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="213.0" prefWidth="507.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hernanlopez.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="507.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondo.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="220.0" layoutY="95.0" prefHeight="17.0" prefWidth="57.0" text="Nombre" textFill="#48f24d">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="132.0" text="Código Técnico" textFill="#48f24d">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="167.0" text="Número de Carné" textFill="#48f24d">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="95.0" prefHeight="17.0" prefWidth="168.0" text="Hernán Misael López Pérez" textFill="#48f24d">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="342.0" layoutY="132.0" text="IN5AV" textFill="#48f24d">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="167.0" text="2022145" textFill="#48f24d">
+         <font>
+            <Font name="Book Antiqua" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="191.0" layoutY="15.0" orientation="VERTICAL" prefHeight="185.0" prefWidth="12.0" style="-fx-background-color: #f76443;" />
+      <Label layoutX="220.0" layoutY="20.0" text="Datos del Programador" textFill="#48f24d">
+         <font>
+            <Font name="Bodoni MT Condensed" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="67.0" layoutX="429.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Kinal.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="18.0" layoutY="15.0" orientation="VERTICAL" prefHeight="185.0" prefWidth="12.0" style="-fx-background-color: #f76443;" />
+      <ImageView fitHeight="185.0" fitWidth="168.0" layoutX="43.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Perfil.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="436.0" layoutY="148.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

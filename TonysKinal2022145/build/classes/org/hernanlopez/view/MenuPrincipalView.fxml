@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="340.0" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hernanlopez.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="340.0" fitWidth="383.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Menu.jpeg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-1.0" prefHeight="44.0" prefWidth="340.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tablas Has">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProductoHas" text="Producto_Has_Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicioHas" text="Servicios_Has_Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEmpleadoHas" text="Servicios_Has_Empleados" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+   </children>
+</AnchorPane>

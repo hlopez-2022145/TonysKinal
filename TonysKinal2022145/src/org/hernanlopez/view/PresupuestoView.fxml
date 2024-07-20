@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="800.0" style="-fx-background-color: #a091a6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hernanlopez.controller.PresupuestoController">
+   <children>
+      <AnchorPane prefHeight="398.0" prefWidth="254.0" style="-fx-background-color: #f76443;">
+         <children>
+            <Pane layoutX="2.0" layoutY="38.0" prefHeight="72.0" prefWidth="250.0" style="-fx-background-color: #48f24d; -fx-background-radius: 0 25 0 25;">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="56.0" layoutY="19.0" prefHeight="35.0" prefWidth="194.0" text="Presupuesto">
+                     <font>
+                        <Font name="Cooper Black" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="46.0" fitWidth="69.0" layoutX="8.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/presupuesto.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="49.0" layoutY="152.0" prefHeight="189.0" prefWidth="166.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Editar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="-83.0" layoutY="150.0" prefHeight="248.0" prefWidth="116.0" style="-fx-background-color: #f3db3c; -fx-background-radius: 56 0 56 0;" />
+            <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="2.0" layoutY="3.0" onMouseClicked="#ventanaEmpresa" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/flecha.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="43.0" layoutY="8.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/menu.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFecha" layoutX="264.0" layoutY="14.0" prefHeight="62.0" prefWidth="520.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="124.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="109.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="109.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Código presupuesto">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="158.0" text="Cantidad Presupuesto" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Fecha Solicitud" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Código Empresa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtCodigoPresupuesto" editable="false" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtCantidadPresupuesto" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoEmpresa" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPresupuestos" layoutX="266.0" layoutY="99.0" onMouseClicked="#seleccionaElemento" prefHeight="248.0" prefWidth="520.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPresupuesto" prefWidth="115.0" text="Cod.Presupuesto" />
+          <TableColumn fx:id="colFechaSolicitud" prefWidth="141.0" text="Fecha Solicitud" />
+            <TableColumn fx:id="colCantidadPresupuesto" prefWidth="135.0" text="Cantidad Presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="128.0" text="Código Empresa" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReporteGenral" layoutX="433.0" layoutY="353.0" mnemonicParsing="false" onAction="#reporteGenral" prefHeight="31.0" prefWidth="182.0" styleClass="button2" stylesheets="@../resource/TonysKinal.css" text="Reporte General">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleado" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f58084f1-8d8b-4460-8d12-96c1be551297">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codTipoEmpleado" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FondoEmpleado" class="java.io.InputStream" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[Select
+                E.codigoEmpleado,
+                E.numeroEmpleado,
+                E.nombresEmpleados,
+                E.apellidosEmpleado,
+                E.direccionEmpleado,
+                E.telefonoContacto,
+                E.gradoCocinero,
+                TE.codigoTipoEmpleado
+From TipoEmpleado TE
+inner join Empleados E
+on TE.codigoTipoEmpleado = E.codigoTipoEmpleado
+where TE.codigoTipoEmpleado = $P{codTipoEmpleado}]]>
+	</queryString>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresEmpleados" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gradoCocinero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="09c3d7a9-0c86-4827-bdd5-c6cc54c71715"/>
+				<imageExpression><![CDATA[$P{FondoEmpleado}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="307" splitType="Stretch">
+			<staticText>
+				<reportElement x="81" y="160" width="208" height="34" uuid="0e46610f-016f-4aef-a65f-3a728361bcd5"/>
+				<textElement>
+					<font fontName="Agency FB" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Empleado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="31" y="255" width="516" height="1" uuid="228264c7-5f7b-49f0-9de5-73e97d10625b"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="351" splitType="Stretch">
+			<staticText>
+				<reportElement x="96" y="29" width="137" height="20" uuid="ca6483ed-a19e-4ad3-a92c-cb21e4c788f4"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código de Empleado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="124" width="137" height="20" uuid="efe31373-ca56-4f20-9997-f563d2b490ab"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empleado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="174" width="137" height="20" uuid="6a14a08e-dbd0-4071-bcc4-20b4cde8e337"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido Empleado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="74" width="137" height="20" uuid="93831b18-f39a-4a1f-a0c3-f07a0ede94ed"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Empleado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="276" y="29" width="223" height="20" uuid="c40610b0-5a69-4c64-9fb1-a74d30051b22"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="74" width="224" height="20" uuid="b71801cc-926c-4496-b6f5-1d01a2dd947e"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="124" width="223" height="20" uuid="002cb001-af2f-4b7c-a5f0-43babb1f0ef3"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresEmpleados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="174" width="223" height="20" uuid="ca05e183-fc68-466d-833f-52c612f8afd0"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosEmpleado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="96" y="216" width="137" height="20" uuid="301c8767-e892-4534-a428-7f1a30e89d01"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección de Empleado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="307" width="137" height="20" uuid="b8ffb50b-7c31-4acf-b608-de89d7c399af"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono Contacto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="259" width="137" height="20" uuid="b9590673-4c22-4d9b-8ff0-d1ba50ba7d1b"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado Cocinero:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="276" y="216" width="223" height="20" uuid="1ed0a648-3485-447d-83e7-6ed811b637c4"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccionEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="307" width="223" height="20" uuid="2c10c3a7-cdf5-4b1b-bf15-a1ea736e8a01"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="259" width="223" height="20" uuid="6b40fc35-8f85-4089-9d07-9d472f1f4a26"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gradoCocinero}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="186" splitType="Stretch"/>
+	</detail>
+</jasperReport>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="1222.0" style="-fx-background-color: #a091a6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hernanlopez.controller.ServicioController">
+   <children>
+      <AnchorPane prefHeight="398.0" prefWidth="254.0" style="-fx-background-color: #f76443;">
+         <children>
+            <Pane layoutX="2.0" layoutY="38.0" prefHeight="72.0" prefWidth="250.0" style="-fx-background-color: #48f24d; -fx-background-radius: 0 25 0 25;">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="95.0" layoutY="23.0" prefHeight="35.0" prefWidth="141.0" text="Servicios">
+                     <font>
+                        <Font name="Cooper Black" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="49.0" layoutY="152.0" prefHeight="189.0" prefWidth="166.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Editar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="44.0" prefWidth="208.0" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="-83.0" layoutY="150.0" prefHeight="248.0" prefWidth="116.0" style="-fx-background-color: #f3db3c; -fx-background-radius: 56 0 56 0;" />
+            <ImageView fitHeight="60.0" fitWidth="66.0" layoutX="27.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Servicio.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="10.0" onMouseClicked="#ventanaEmpresa" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/flecha.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="57.0" layoutY="5.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/menu.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFechaServicio" layoutX="271.0" layoutY="6.0" prefHeight="107.0" prefWidth="935.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="119.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="189.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="121.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="136.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="189.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Código Servicio">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="157.0" text="Fecha servicio" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Hora de servicio" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Lugar de servicio" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Teléfono contacto" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="14.0" prefWidth="147.0" text="código empresa" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoServicio" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="3.0" right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtLugarServicio" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="3.0" right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtTelefonoContacto" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="3.0" right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoEmpresa" prefHeight="25.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="3.0" right="3.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <TextField fx:id="txtHoraServicio" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="3.0" right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label prefHeight="14.0" prefWidth="147.0" text="Tipo de servicio" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTipoServicio" GridPane.columnIndex="5">
+               <GridPane.margin>
+                  <Insets left="3.0" right="3.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblServicios" layoutX="266.0" layoutY="124.0" onMouseClicked="#seleccionaElemento" prefHeight="256.0" prefWidth="935.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="75.0" text="Cod.Servicio" />
+          <TableColumn fx:id="colFechaServicio" prefWidth="103.0" text="Fecha de Servicio" />
+            <TableColumn fx:id="colTipoServicio" prefWidth="202.0" text="Tipo de Servicio" />
+            <TableColumn fx:id="colHoraServicio" prefWidth="101.0" text="Hora de Servicio" />
+            <TableColumn fx:id="colLugarServicio" prefWidth="215.0" text="Lugar de Servicio" />
+            <TableColumn fx:id="colTelefonoContacto" prefWidth="127.0" text="Teléfono Contacto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="111.0" text="Código Empresa" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

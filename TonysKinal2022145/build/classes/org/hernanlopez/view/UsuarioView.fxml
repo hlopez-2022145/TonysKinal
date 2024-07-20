@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="593.0" style="-fx-background-color: #a091a6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hernanlopez.controller.UsuarioController">
+   <children>
+      <AnchorPane prefHeight="398.0" prefWidth="254.0" style="-fx-background-color: #f76443;">
+         <children>
+            <Pane layoutX="2.0" layoutY="38.0" prefHeight="72.0" prefWidth="250.0" style="-fx-background-color: #48f24d; -fx-background-radius: 0 25 0 25;">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="86.0" layoutY="19.0" prefHeight="35.0" prefWidth="141.0" text="Usuarios">
+                     <font>
+                        <Font name="Cooper Black" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="86.0" fitWidth="89.0" layoutX="4.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Usuarios.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="49.0" layoutY="152.0" prefHeight="107.0" prefWidth="166.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="57.0" prefWidth="166.0" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="68.0" prefWidth="166.0" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="-83.0" layoutY="150.0" prefHeight="248.0" prefWidth="116.0" style="-fx-background-color: #f3db3c; -fx-background-radius: 56 0 56 0;" />
+            <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="8.0" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/flecha.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="276.0" layoutY="58.0" prefHeight="259.0" prefWidth="293.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="133.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="129.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="119.0" text="Código Usuario">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoUsuario" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellidoUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPassword" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Nombre Usuario" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="119.0" text="Apellido Usuario" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="119.0" text="Usuario" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="119.0" text="Password" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
